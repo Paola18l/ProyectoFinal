@@ -1,0 +1,82 @@
+.carousel-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.owl-carousel .item {
+    text-align: center;
+    padding: 15px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    opacity: 0.7;
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container:hover .icon-overlay {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.card-content .details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.card-content .price {
+    background-color: #04a55c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

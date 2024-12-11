@@ -1,0 +1,971 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .contact-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+header .contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #04a55c;
+    display: flex;
+    justify-content: space-between; /* Espacia elementos a los lados */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #04a55c;
+    border-radius: 5px;
+}
+
+/* Apply Now Button */
+.apply-now {
+    margin-left: auto; /* Mueve el botón hacia la derecha */
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.apply-now:hover {
+    background-color: #444;
+}
+/* Slider Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    max-width: 60%;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+}
+
+.text h1 span {
+    color: #04a55c;
+}
+
+.text p {
+    margin-bottom: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #04a55c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #038a4b;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* es la parte del texto*/
+.feature-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    opacity: 0; /* Initial hidden state */
+    transform: translateY(30px); /* Initial position for fade-in */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth fade-in */
+}
+
+.feature-section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset to original position */
+}
+
+.feature-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature-section h2 span {
+    color: #04a55c;
+    font-weight: bold;
+}
+
+.feature-section p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+/* Cards Section */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for the section */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.95); /* Light background with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for cards */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.9; /* Slight transparency for images */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateX(5px) rotate(0.5deg);
+    animation: shake 0.3s ease-in-out;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    opacity: 1; /* Remove transparency on hover */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 15px 20px;
+}
+
+/* Shake Effect */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+/*formulario*/
+/* General Section Styles */
+.contact-section {
+    position: relative; /* Habilita el posicionamiento absoluto de los hijos */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #fff;
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen ocupe toda la sección */
+    opacity: 0.2; /* Hace que la imagen sea semitransparente */
+    z-index: 1; /* Envía la imagen al fondo */
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.9); /* Fondo con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 40%; /* Ocupa el 40% en pantallas grandes */
+    animation: slideUp 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.contact-form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-form h2 {
+    color: #04a55c;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #04a55c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #038a4b;
+}
+.contact-form,
+.info-section {
+    position: relative; /* Eleva estos elementos sobre la imagen */
+    z-index: 2; /* Asegura que estén sobre la imagen */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Section */
+.info-section {
+    width: 55%; /* Ocupa el 55% en pantallas grandes */
+    padding: 20px;
+    animation: slideUp 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.info-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Cambia el color del texto a blanco */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente detrás del texto */
+    padding: 10px; /* Espaciado interno para mejorar la visibilidad */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+    display: inline-block; /* Asegura que el fondo se ajuste al texto */
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #04a55c;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    animation: rotate 1.5s linear infinite;
+    background-color: #038a4b;
+}
+
+/* Animaciones */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+/* General Section Styles */
+.popular-courses-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+}
+
+.popular-courses-section .content {
+    position: relative;
+}
+
+/* Títulos */
+.animated-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated-title span {
+    color: #04a55c;
+}
+
+/* Texto descriptivo */
+.animated-text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Clase visible (Activada con JavaScript) */
+.popular-courses-section.visible .animated-title,
+.popular-courses-section.visible .animated-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Cards Section */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for the section */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.95); /* Light background with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for cards */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.9; /* Slight transparency for images */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateX(5px) rotate(0.5deg);
+    animation: shake 0.3s ease-in-out;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    opacity: 1; /* Remove transparency on hover */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 15px 20px;
+}
+
+/* Shake Effect */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+.contact-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form,
+.info-section {
+    width: 90%; /* Se ajusta el ancho en pantallas pequeñas */
+}
+
+.background-image {
+    object-position: center; /* Ajusta el punto focal de la imagen */
+}
+}
+.animated-title {
+    font-size: 2rem;
+}
+
+.animated-text {
+    font-size: 0.9rem;
+}
+
+/* General Styles for the Section */
+.promo-section {
+    display: flex;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fondo general */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Responsivo */
+    width: 100%;
+}
+
+/* Imagen de la izquierda */
+.image-container {
+    flex: 1; /* Ocupa el espacio proporcional */
+    padding-right: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+}
+
+/* Texto y CTA de la derecha */
+.text-container {
+    flex: 1;
+    background-color: #04a55c; /* Fondo verde */
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-register {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #04a55c;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-register:hover {
+    background-color: #02a64f;
+    color: #fff;
+
+    .teachers-section {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f9f9f9;
+    }
+    
+    .teachers-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .teachers-section h2 span {
+        color: #04a55c;
+    }
+    
+    .section-description {
+        color: #666;
+        margin-bottom: 30px;
+    }
+    
+    .accordion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .accordion-item {
+        width: 300px;
+    }
+    
+    .teacher-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .teachers-section {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f9f9f9;
+    }
+    
+    .teachers-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .teachers-section h2 span {
+        color: #04a55c;
+    }
+    
+    .section-description {
+        color: #666;
+        margin-bottom: 30px;
+    }
+    
+    /* Diseño del Acordeón */
+    .accordion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .accordion-item {
+        width: calc(33.333% - 20px); /* 3 columnas en desktop */
+        min-width: 280px; /* Ancho mínimo para tarjetas */
+    }
+    
+    .teacher-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .teacher-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .teacher-card .image-container img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .teacher-card .image-container:hover img {
+        transform: scale(1.1);
+    }
+    
+    .teacher-card .info-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .teacher-card .image-container:hover .info-overlay {
+        opacity: 1;
+    }
+    
+    .info-overlay h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    
+    .info-overlay p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .social-links a {
+        color: #fff;
+        margin: 0 5px;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+    }
+    
+    .social-links a:hover {
+        color: #04a55c;
+    }
+
+/* Estilos generales */
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.gallery-section h2 span {
+    color: #04a55c;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Grid de la galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    overflow: hidden; /* Para las animaciones de entrada */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    animation: slide-in-left 1s ease-in-out; /* Animación inicial */
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom al pasar el ratón */
+}
+
+/* Overlay del ícono de búsqueda */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item .overlay i {
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay i {
+    transform: scale(1.2); /* Zoom en el ícono */
+}
+
+/* Animación de entrada */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 430px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    nav {
+        flex-direction: column; /* Apila los elementos verticalmente en móvil */
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none; /* Oculta el menú por defecto en móvil */
+        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    }
+
+    nav ul.active {
+        display: flex; /* Muestra el menú al activarlo */
+    }
+
+    .apply-now {
+        margin: 10px 0 0 auto; /* Alinea el botón correctamente en móvil */
+        align-self: flex-end;
+    }
+    .feature-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-section p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .info-section {
+        width: 90%;
+    }
+    .row {
+        flex-direction: column; /* Cambia a diseño vertical */
+    }
+
+    .image-container {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .accordion-item {
+        width: calc(50% - 20px); /* 2 columnas en tablets */
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+@media screen and (min-width: 1200px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex !important;
+    }
+    .feature-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .feature-section p {
+        font-size: 1.2rem;
+    }
+}
+.accordion-item {
+    width: 100%; /* 1 columna en móviles */
+}
+
+.teachers-section h2 {
+    font-size: 2rem; /* Ajustar tamaño del texto */
+}
+}
